@@ -1,14 +1,30 @@
+<!-- Debemos de tener en cuenta que bootstrap es extensible, es decir, podemos extender los estilos que ya nos da bootstrap, por ejemplo si le queremos cambiar el ancho o el alto a un row cojemos la clase .row y le asignamos un height diferente y ya esta -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <!-- Cuando nosotros abrimos cualquier página en la URL a donde nos manda es a un servidor, pero como nosotros utilizamos live server este nos lleva a la ip de un servidor local 127.0.0.0 el cual es el nuestro, ya si tenemos comprado un dominio nos mandara a un servidor y hasta cierto puerto -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- CDN significa (Content Delivery Network) el cual es una red que nos permite descargar una copia de los archivos en este caso son los archivos necesarios para que corra bootstrap sin ser archivos locales sino que se va a descargar en la cache por decirlo así en el computador del usuario que acceda a la página web todo esto con la facilidad de no tener que descargar esos archivos de manera local y que la página web pese mas -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  <title>Bootstrap</title>  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <title>Bootstrap</title>
+  <style>
+    .row {
+      background-color: lightcoral;
+      height: 40px;
+      margin: 5px;
+      padding: 5px;
+    }
+
+    .col {}
+  </style>
 </head>
+
 <body>
   <!-- <div class="container mt-5">
     <div class="row">
@@ -35,18 +51,20 @@
   </div> -->
 
   <!-- La diferencia entre container y container-fluid es que el primero no toma todo el ancho del dispositivo sino que cierta parte dejando como un margen en la width, por el contrario tenemos al container-fluid que si se estira todo el ancho del dispositivo ya sea celular, tablet, escritori, etc. Cuando digo etc es ajustando nosotros el tamaño del dispositivo con las herramientas del desarrollador -->
-  <div class="container-sm">
+  <div class="container-sm text-center">
     <div class="row border border-danger">
-      <div class="col bg-primary border border-black h-25">Container sm</div>
-      <div class="col bg-primary border border-black h-25">Kemtch</div>
+      <div class="col bg-primary border border-black">Container sm</div>
+      <!-- Cuando tenemos col sin mas lo que pasa es que esas columnas se van a distribuir en el espacio que tienen sin necesidad de que le asignemos col-4, col-8. Para tener que llenar las 12 columnas necesarias que nos solicita bootstrap -->
+      <div class="col bg-primary border border-black  ">Kemtch</div>
     </div>
     <div class="row">
-      <div class="col bg-primary border border-black h-25">Kemtch</div>
-      <div class="col bg-primary border border-black h-25">Kemtch</div>
+      <div class="col bg-primary border border-black  ">Kemtch</div>
+      <div class="col bg-primary border border-black  ">Kemtch</div>
+      </di>
     </div>
-  </div>
 
-  <!-- Hay que tener en cuenta que sm, lg, xl, etc. Son los puntos de quiebre cuando vayamos bajando la resolución del dispositivo (breakpoints) entonces la -sm nos indica desde cuanto para arriba le ponemos una separación a los lados, pero en lg este breakpoint son pixeles mas y así sucesivamente, estas son los diferentes tamaños:
+
+    <!-- Hay que tener en cuenta que sm, lg, xl, etc. Son los puntos de quiebre cuando vayamos bajando la resolución del dispositivo (breakpoints) entonces la -sm nos indica desde cuanto para arriba le ponemos una separación a los lados, pero en lg este breakpoint son pixeles mas y así sucesivamente, estas son los diferentes tamaños:
   
   Bootstrap has 4 breakpoints that you can use:
 
@@ -55,17 +73,19 @@
     - .col-lg for laptops (≥992px);
     - .col-xl for desktops (≥1200px)
 
-  Todo esto con el fin de indicar que todo por ejemplo si cojemos .container-sm cuando 
+  Todo esto con el fin de indicar que todo por ejemplo si cojemos .container-sm nos va a indicar que vamos a conservar tal cual como esta y como lo vemos hasta la medida de dispositivos pequeños ya de ahí para abajo no se colapse
+
+  Osea es como que le damos la condición de que aquí para abajo ya no conserve el mismo estilo sino que coja otro por ejemplo con los lg, a partir del tamaño 992 hacia abajo cambie su distribución 
   -->
 
-  <div class="container">
-    <div class="row">
-      <div class="col bg-warning">saludos</div>
-      <div class="col bg-warning">saludos2</div>
+    <!-- Debemos de tener en cuenta que si queremos que todo este en una misma fila debemos de hacer que el tamño de las columna que haya dentro del row sea igual a 12 para que se pueda completar todo el tamaño que nos pide el container tener sino se baja en la misma fila pero al ya ser mas grande los 12 tiene que salir por cualquier lado, por eso baja para que no se dañe la grid -->
+    <div class="container-lg">
+      <div class="row">
+        <div class="col-11 col-sm-3 bg-warning border border-5 border-black">saludos</div>
+        <div class="col-3 col-sm-9 bg-warning border border-5 border-black">saludos2</div>
+      </div>
     </div>
-  </div>
-
-
 
 </body>
+
 </html>
