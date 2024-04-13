@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Cuando nosotros abrimos cualquier página en la URL a donde nos manda es a un servidor, pero como nosotros utilizamos live server este nos lleva a la ip de un servidor local 127.0.0.0 el cual es el nuestro, ya si tenemos comprado un dominio nos mandara a un servidor y hasta cierto puerto -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CDN significa (Content Delivery Network) el cual es una red que nos permite descargar una copia de los archivos en este caso son los archivos necesarios para que corra bootstrap sin ser archivos locales sino que se va a descargar en la cache por decirlo así en el computador del usuario que acceda a la página web todo esto con la facilidad de no tener que descargar esos archivos de manera local y que la página web pese mas -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <title>Bootstrap</title>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <title>Bootstrap</title>  
 </head>
 <body>
-  <div class="container mt-5">
+  <!-- <div class="container mt-5">
     <div class="row">
       <div class="bg-danger col-sm-5">
         <div class="card-title">
@@ -29,6 +32,40 @@
         </div>
       </div>
     </div>
+  </div> -->
+
+  <!-- La diferencia entre container y container-fluid es que el primero no toma todo el ancho del dispositivo sino que cierta parte dejando como un margen en la width, por el contrario tenemos al container-fluid que si se estira todo el ancho del dispositivo ya sea celular, tablet, escritori, etc. Cuando digo etc es ajustando nosotros el tamaño del dispositivo con las herramientas del desarrollador -->
+  <div class="container-sm">
+    <div class="row border border-danger">
+      <div class="col bg-primary border border-black h-25">Container sm</div>
+      <div class="col bg-primary border border-black h-25">Kemtch</div>
+    </div>
+    <div class="row">
+      <div class="col bg-primary border border-black h-25">Kemtch</div>
+      <div class="col bg-primary border border-black h-25">Kemtch</div>
+    </div>
   </div>
+
+  <!-- Hay que tener en cuenta que sm, lg, xl, etc. Son los puntos de quiebre cuando vayamos bajando la resolución del dispositivo (breakpoints) entonces la -sm nos indica desde cuanto para arriba le ponemos una separación a los lados, pero en lg este breakpoint son pixeles mas y así sucesivamente, estas son los diferentes tamaños:
+  
+  Bootstrap has 4 breakpoints that you can use:
+
+    - .col-sm for larger mobile phones (devices with resolutions ≥ 576px);
+    - .col-md for tablets (≥768px);
+    - .col-lg for laptops (≥992px);
+    - .col-xl for desktops (≥1200px)
+
+  Todo esto con el fin de indicar que todo por ejemplo si cojemos .container-sm cuando 
+  -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col bg-warning">saludos</div>
+      <div class="col bg-warning">saludos2</div>
+    </div>
+  </div>
+
+
+
 </body>
 </html>
