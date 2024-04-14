@@ -20,8 +20,6 @@
       margin: 5px;
       padding: 5px;
     }
-
-    .col {}
   </style>
 </head>
 
@@ -55,16 +53,16 @@
     <div class="row border border-danger">
       <div class="col bg-primary border border-black">Container sm</div>
       <!-- Cuando tenemos col sin mas lo que pasa es que esas columnas se van a distribuir en el espacio que tienen sin necesidad de que le asignemos col-4, col-8. Para tener que llenar las 12 columnas necesarias que nos solicita bootstrap -->
-      <div class="col bg-primary border border-black  ">Kemtch</div>
+      <div class="col bg-primary border border-black">Kemtch</div>
     </div>
     <div class="row">
-      <div class="col bg-primary border border-black  ">Kemtch</div>
-      <div class="col bg-primary border border-black  ">Kemtch</div>
+      <div class="col bg-primary border border-black">Kemtch</div>
+      <div class="col bg-primary border border-black">Kemtch</div>
       </di>
     </div>
+  </div>
 
-
-    <!-- Hay que tener en cuenta que sm, lg, xl, etc. Son los puntos de quiebre cuando vayamos bajando la resolución del dispositivo (breakpoints) entonces la -sm nos indica desde cuanto para arriba le ponemos una separación a los lados, pero en lg este breakpoint son pixeles mas y así sucesivamente, estas son los diferentes tamaños:
+  <!-- Hay que tener en cuenta que sm, lg, xl, etc. Son los puntos de quiebre cuando vayamos bajando la resolución del dispositivo (breakpoints) entonces la -sm nos indica desde cuanto para arriba le ponemos una separación a los lados, pero en lg este breakpoint son pixeles mas y así sucesivamente, estas son los diferentes tamaños:
   
   Bootstrap has 4 breakpoints that you can use:
 
@@ -78,13 +76,13 @@
   Osea es como que le damos la condición de que aquí para abajo ya no conserve el mismo estilo sino que coja otro por ejemplo con los lg, a partir del tamaño 992 hacia abajo cambie su distribución 
   -->
 
-    <!-- Debemos de tener en cuenta que si queremos que todo este en una misma fila debemos de hacer que el tamño de las columna que haya dentro del row sea igual a 12 para que se pueda completar todo el tamaño que nos pide el container tener sino se baja en la misma fila pero al ya ser mas grande los 12 tiene que salir por cualquier lado, por eso baja para que no se dañe la grid -->
-    <div class="container-lg">
-      <div class="row">
-        <div class="col-11 col-sm-3 bg-warning border border-5 border-black">saludos</div>
-        <div class="col-3 col-sm-9 bg-warning border border-5 border-black">saludos2</div>
-      </div>
+  <!-- Debemos de tener en cuenta que si queremos que todo este en una misma fila debemos de hacer que el tamño de las columna que haya dentro del row sea igual a 12 para que se pueda completar todo el tamaño que nos pide el container tener sino se baja en la misma fila pero al ya ser mas grande los 12 tiene que salir por cualquier lado, por eso baja para que no se dañe la grid -->
+  <div class="container-lg">
+    <div class="row">
+      <div class="col-11 col-sm-3 bg-warning border border-5 border-black">saludos</div>
+      <div class="col-3 col-sm-9 bg-warning border border-5 border-black">saludos2</div>
     </div>
+  </div>
 
 </body>
 
